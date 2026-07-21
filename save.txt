@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include"header.h"
+#include<string.h>
+#include<ctype.h>
+#include<stdlib.h>
+
+void print_list(hash_node*arr)
+{
+    printf(" INDEX   FILECOUNT   WORD   WORDCOUNT   FILENAME\n");
+     for(int i=0;i<27;i++)
+     {
+        if(arr[i].link !=NULL)
+        {
+            main_node* main_node_temp= arr[i].link;
+            while(main_node_temp != NULL)
+            {
+                printf("%d %d %s",arr[i].index,main_node_temp->file_count,main_node_temp->word);
+                sub_node* sub_node_temp= main_node_temp->sublink;
+                while(sub_node_temp !=NULL)
+                {
+                    printf("%d %s",sub_node_temp->word_count,sub_node_temp->filename);
+                    sub_node_temp=sub_node_temp->link;    
+                }
+                printf("\n");
+               main_node_temp=main_node_temp->link; 
+            }
+
+        }
+
+     }
+}
