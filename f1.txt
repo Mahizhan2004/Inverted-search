@@ -1,2 +1,1 @@
-hi hello how are you
-This is Mahizhan how are you
+A C-based text indexing project that maps words to the files in which they occur. 
