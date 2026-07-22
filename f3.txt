@@ -1,1 +1,1 @@
-hi hello how are you
+It enables fast and efficient searching using hash tables and linked lists, while demonstrating file handling, pointers, dynamic memory allocation, and data structures.
